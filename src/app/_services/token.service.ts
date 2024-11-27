@@ -15,4 +15,9 @@ export class TokenService {
     const token = localStorage.getItem("token")
     return !! token
   }
+
+  clearToken():void{
+    localStorage.removeItem('token')
+    this.router.navigate(['/'])
+  }
 }
